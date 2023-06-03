@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
+		rel="stylesheet">
+	<script src="https://kit.fontawesome.com/7c4ea9f910.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+
+	<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! CRÉATION DASHBOARD !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+	<div class="black-bg edit header">
+		<span>
+			<i class="fa-regular fa-pen-to-square"></i>
+			Mode édition
+		</span>
+		<span class="white-bg">publier les changements</span>
+	</div>
+
+	<div class="body">
+
+		<header>
+			<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">projets</a></li>
+					<li>contact</li>
+					<li><a href="login.html" class="btn-connect">login</a></li>
+					<button type="button" class="logout">logout</button>
+					<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main>
+			<section id="introduction">
+				<figure>
+					<img src="./assets/images/sophie-bluel.png" alt="">
+					<span class="edit-image"><i class="fa-regular fa-pen-to-square"></i>
+						Modifier
+					</span>
+				</figure>
+				<article>
+					<span class="edit-description"><i class="fa-regular fa-pen-to-square"></i>
+						Modifier
+					</span>
+					<h2>Designer d'espace</h2>
+					<p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la
+						livraison
+						finale du chantier.</p>
+					<p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les
+						couleurs dans le respect de l’esprit des lieux, et le choix adapté des matériaux. Le suivi du
+						chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p>
+					<p>En cas de besoin, une équipe pluridisciplinaire constituée de : architecte DPLG,
+						décorateur(trice).
+					</p>
+
+				</article>
+			</section>
+
+			<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! MODALE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+			<section id="portfolio">
+				<div class="flex">
+					<h2>Mes Projets</h2>
+					<a href="#modal-essaie" class="js-modal-essaie edit modif">
+						<i class="fa-regular fa-pen-to-square"></i>
+						Modifier
+					</a>
+				</div>
+
+				<aside id="modal-essaie" class="modal-essaie" aria-hidden="true" role="dialog" style="display: none;">
+					<div class="modal-wrapper-essaie js-modal-stop-essaie">
+						<div class="btn-go-back-close">
+							<button class="go-back">
+								<span class="display-none">Retour en arrière</span>
+								<i class="fa-solid fa-arrow-left"></i>
+							</button>
+						
+							<button class="js-modal-close-essaie">
+								<span class="display-none">Fermer</span>
+								<i class="fa-solid fa-xmark"></i>
+							</button>
+						</div>
+
+						<section class="modal-content">
+							<h3>Galerie photo</h3>
+							
+							<div class="gallery-modal">
+							</div>
+
+							<hr>
+							
+							<div class="modal-flex-bottom">
+								<a href="#" class="add-btn edit modif">Ajouter une photo</a>
+								<a href="#" class="delete-btn">Supprimer la galerie</a>
+							</div>
+						</section>
+
+						<section class="modal-content2">
+							<h3>Ajout photo</h3>
+
+							<div>
+								<form name="add-project" id="add-project" method="post" enctype="multipart/form-data">
+									<div class="import-photo">
+										<i class="fa-regular fa-image"></i>
+										<div>
+											<input type="file" name="image" id="file" alt="title" accept=".png, .jpeg, .jpg" size="4000000" required
+												class="input-form-add-img add-img">
+											<div class="form-add-img">
+												<label class="label-add-project" for="file">+ Ajouter photo</label>
+												<span class="span-add-project">jpg, png : 4mo max</span>
+											</div>
+										</div>
+										
+									</div>
+	
+									<label class="form-label" for="title">Titre</label>
+									<input class="form-input" type="text" name="title" id="title" required>
+	
+									<label class="form-label" for="categories-selection">Catégorie</label>
+									<select class="form-input" name="category" id="category" required>
+										<option value="#"></option>
+										<option value="1">Objets</option>
+										<option value="2">Appartements</option>
+										<option value="3">Hôtels & restaurants</option>
+									</select>
+	
+									<hr>
+	
+									<button class="confirm-btn">Valider</button>
+								</form>
+							</div>
+						</section>
+					</div>
+				</aside>
+
+			</section>
+
+			<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! FILTRES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+			<div class="filters">
+				<button class="filters-btn allBtn">Tous</button>
+				<button class="filters-btn objectBtn">Objets</button>
+				<button class="filters-btn apartmentBtn">Appartements</button>
+				<button class="filters-btn hotelBtn">Hôtels & restaurants</button>
+			</div>
+
+			<div class="gallery">
+				<!-- ajout de la gallerie en JS -->
+			</div>
+
+			</section>
+
+			<section id="contact">
+				<h2>Contact</h2>
+				<p>Vous avez un projet ? Discutons-en !</p>
+				<form action="#" method="post">
+					<label for="name">Nom</label>
+					<input type="text" name="name" id="name">
+					<label for="email">Email</label>
+					<input type="email" name="email" id="email">
+					<label for="message">Message</label>
+					<textarea name="message" id="message" cols="30" rows="10"></textarea>
+					<input type="submit" value="Envoyer">
+				</form>
+			</section>
+		</main>
+
+		<footer>
+			<nav>
+				<ul>
+					<li>Mentions Légales</li>
+				</ul>
+			</nav>
+		</footer>
+
+	</div>
+	<script type="module" src="js/script.js"></script>
+</body>
+
+</html>
